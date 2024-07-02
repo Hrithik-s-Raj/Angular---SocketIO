@@ -1,0 +1,22 @@
+<!-- src/app/task/task.component.html -->
+<div>
+    <h1>Angular Client</h1>
+  
+    <div>
+      <label>User ID: </label>
+      <input [(ngModel)]="userId" placeholder="Enter your user ID">
+      <button (click)="registerUser()">Register</button>
+    </div>
+  
+    <div>
+      <label>Task Data: </label>
+      <input [(ngModel)]="taskData" placeholder="Enter task data">
+      <button (click)="sendTask()">Send Task</button>
+    </div>
+  
+    <div *ngIf="taskResult">
+      <h3>Task Result:</h3>
+      <pre>{{ taskResult | json }}</pre>
+    </div>
+  </div>
+  
